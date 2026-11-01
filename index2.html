@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Prof. Mubashir - Graphic Designing, CorelDRAW, AI Tools and Technology Tutorials.">
+<title>Prof. Mubashir | Creator Portfolio</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --primary: #FF0000;
+    --bg: #080808;
+    --bg2: #111111;
+    --card: #171717;
+    --white: #ffffff;
+    --gray: #aaaaaa;
+    --border: rgba(255,255,255,0.1);
+    --glass: rgba(15,15,15,0.78);
+    --transition: all 0.35s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: clamp(25px, 4vw, 38px);
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: var(--primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 55px;
+    font-size: 14px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-cta {
+    background: var(--primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.nav-cta:hover {
+    background: white;
+    color: black !important;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 40%, rgba(255,0,0,0.13), transparent 45%),
+        linear-gradient(135deg, #080808, #111111);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--primary);
+    border: 1px solid rgba(255,0,0,.5);
+    padding: 8px 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(38px, 7vw, 76px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+    text-shadow: 0 0 25px rgba(255,0,0,.35);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 620px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: black;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border-color: rgba(255,255,255,.3);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+    transform: translateY(-4px);
+}
+
+/* VIDEO SECTION */
+
+.videos {
+    background: var(--bg2);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 35px rgba(255,0,0,.13);
+}
+
+.video-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #222;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.video-card:hover img {
+    transform: scale(1.08);
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: var(--primary);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.video-card:hover .play-icon {
+    transform: translate(-50%,-50%) scale(1.2);
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h3 {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.video-info p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.video-loading {
+    grid-column: 1/-1;
+    text-align: center;
+    color: var(--gray);
+    padding: 40px 0;
+}
+
+.video-loading i {
+    color: var(--primary);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-visual {
+    min-height: 380px;
+    background:
+        radial-gradient(circle, rgba(255,0,0,.17), transparent 60%),
+        #151515;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(35px, 6vw, 60px);
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-logo span {
+    color: var(--primary);
+}
+
+.about-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span {
+    color: var(--primary);
+}
+
+.about-content p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skill {
+    padding: 9px 14px;
+    background: rgba(255,0,0,.08);
+    border: 1px solid rgba(255,0,0,.3);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* CHANNEL STATS */
+
+.stats {
+    background: #111;
+    padding: 55px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-box i {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.stat-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--bg2);
+}
+
+.contact-wrapper {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 13px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #0d0d0d;
+    color: white;
+    border: 1px solid var(--border);
+    outline: none;
+    padding: 14px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(255,0,0,.12);
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#formMessage {
+    margin-top: 15px;
+    color: #ff7777;
+    font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    padding: 45px 0 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--primary);
+}
+
+.footer-content p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.copyright {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    color: #777;
+    font-size: 11px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        padding: 75px 0;
+    }
+
+    .nav-content {
+        height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #101010;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px;
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-wrapper {
+        padding: 25px 18px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 12px 17px;
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .container {
+        width: 92%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-content">
+        <a href="#home" class="logo">PROF.<span>MUBASHIR</span></a>
+
+        <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a class="nav-cta"
+                   href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+                   target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> Subscribe
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-label">
+                <i class="fas fa-circle"></i> CREATIVE MINDS. DIGITAL FUTURE.
+            </div>
+
+            <h1>
+                I'M PROF.<br>
+                <span>MUBASHIR</span>
+            </h1>
+
+            <p>
+                Welcome to my creative world! Explore Graphic Designing,
+                CorelDRAW tutorials, Artificial Intelligence, and modern
+                digital technologies. Learn, Create and Innovate.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#videos" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Explore Videos
+                </a>
+
+                <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline">
+                    <i class="fab fa-youtube"></i> Visit Channel
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos" id="videos">
+    <div class="container">
+        <h2 class="section-title">LATEST <span>VIDEOS</span></h2>
+        <p class="section-subtitle">
+            Check out my latest tutorials and creative content.
+        </p>
+
+        <div class="video-grid" id="videoGrid">
+            <div class="video-loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading latest YouTube videos...</p>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+            <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary">
+                View All Videos <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">ABOUT <span>ME</span></h2>
+        <p class="section-subtitle">
+            Creativity meets technology.
+        </p>
+
+        <div class="about-grid reveal">
+            <div class="about-visual">
+                <div class="about-logo">
+                    PROF.<br><span>MUBASHIR</span>
+                    <div style="font-size:14px;letter-spacing:5px;color:#aaa;margin-top:15px;">
+                        CREATIVE DIGITAL WORLD
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h2>THE PERSON BEHIND <span>THE SCREEN</span></h2>
+
+                <p>
+                    I'm Prof. Mubashir, a creative educator and digital
+                    content creator passionate about graphic designing,
+                    computer science and emerging technologies.
+                </p>
+
+                <p>
+                    Through my YouTube channel, I share practical tutorials
+                    and creative knowledge to help students, designers and
+                    digital creators improve their skills.
+                </p>
+
+                <div class="skills">
+                    <span class="skill">Graphic Designing</span>
+                    <span class="skill">CorelDRAW</span>
+                    <span class="skill">Artificial Intelligence</span>
+                    <span class="skill">Computer Science</span>
+                    <span class="skill">YouTube Tutorials</span>
+                    <span class="skill">Digital Creativity</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CHANNEL STATS -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <i class="fab fa-youtube"></i>
+                <h3>YouTube</h3>
+                <p>My Creative Platform</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fas fa-video"></i>
+                <h3 id="videoCount">0</h3>
+                <p>Latest Videos Displayed</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>100%</h3>
+                <p>Passion for Creativity</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">GET IN <span>TOUCH</span></h2>
+        <p class="section-subtitle">
+            Have a project, collaboration or question? Let's connect.
+        </p>
+
+        <div class="contact-wrapper reveal">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject"
+                           placeholder="What is this about?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message"
+                              placeholder="Write your message here..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">
+            PROF.<span>MUBASHIR</span>
+        </div>
+
+        <p>Learn. Create. Innovate. Inspire.</p>
+
+        <div class="social-icons">
+            <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Prof. Mubashir. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+/* ============================
+   YOUTUBE RSS VIDEO FEED
+============================ */
+
+const CHANNEL_ID = "UC5zikZ5RP2lrAUA41o8Tpxg";
+
+const videoGrid = document.getElementById("videoGrid");
+const videoCount = document.getElementById("videoCount");
+
+async function loadYouTubeVideos() {
+
+    const feedURL =
+        `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+
+    const apiURL =
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedURL)}`;
+
+    try {
+
+        const response = await fetch(apiURL);
+
+        if (!response.ok) {
+            throw new Error("Unable to fetch videos.");
+        }
+
+        const data = await response.json();
+
+        if (data.status !== "ok" || !data.items) {
+            throw new Error("Invalid RSS feed.");
+        }
+
+        // Parse YouTube video ID from GUID
+        const videos = data.items
+            .map(item => {
+
+                const guid = item.guid || "";
+
+                // YouTube GUID format: yt:video:VIDEO_ID
+                const match = guid.match(/(?:yt:video:|v=)([a-zA-Z0-9_-]{11})/);
+
+                if (!match) return null;
+
+                return {
+                    id: match[1],
+                    title: item.title,
+                    date: item.pubDate
+                };
+
+            })
+            .filter(Boolean)
+            .slice(0, 3);
+
+        if (videos.length === 0) {
+            throw new Error("No videos found.");
+        }
+
+        videoGrid.innerHTML = "";
+
+        videos.forEach(video => {
+
+            const videoURL =
+                `https://www.youtube.com/watch?v=${video.id}`;
+
+            const thumbnailURL =
+                `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
+
+            const date = new Date(video.date);
+
+            const formattedDate = isNaN(date.getTime())
+                ? "Latest Upload"
+                : date.toLocaleDateString();
+
+            const card = document.createElement("article");
+            card.className = "video-card";
+
+            const thumb = document.createElement("div");
+            thumb.className = "video-thumb";
+
+            const image = document.createElement("img");
+            image.src = thumbnailURL;
+            image.alt = video.title;
+            image.loading = "lazy";
+
+            const play = document.createElement("div");
+            play.className = "play-icon";
+            play.innerHTML = '<i class="fas fa-play"></i>';
+
+            thumb.append(image, play);
+
+            const info = document.createElement("div");
+            info.className = "video-info";
+
+            const title = document.createElement("h3");
+            title.textContent = video.title;
+
+            const dateText = document.createElement("p");
+            dateText.innerHTML =
+                '<i class="far fa-calendar"></i> ' + formattedDate;
+
+            info.append(title, dateText);
+            card.append(thumb, info);
+
+            card.style.cursor = "pointer";
+
+            card.addEventListener("click", () => {
+                window.open(videoURL, "_blank", "noopener,noreferrer");
+            });
+
+            videoGrid.appendChild(card);
+
+        });
+
+        videoCount.textContent = videos.length;
+
+    } catch (error) {
+
+        console.error("YouTube RSS Error:", error);
+
+        videoGrid.innerHTML = `
+            <div class="video-loading">
+                <i class="fab fa-youtube"></i>
+                <p>Videos could not be loaded right now.</p>
+                <a href="https://www.youtube.com/channel/${CHANNEL_ID}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="color:#ff0000;display:inline-block;margin-top:15px;">
+                   Visit YouTube Channel
+                </a>
+            </div>
+        `;
+
+    }
+}
+
+loadYouTubeVideos();
+
+
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+
+/* ============================
+   SCROLL REVEAL ANIMATION
+============================ */
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+
+/* ============================
+   CONTACT FORM VALIDATION
+============================ */
+
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !subject || !message) {
+
+        formMessage.textContent = "Please complete all fields.";
+        return;
+
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
+        formMessage.textContent = "Please enter a valid email address.";
+        return;
+
+    }
+
+    formMessage.textContent =
+        "Your message is ready, but the form needs a connected email or backend service to deliver it.";
+
+});
+
+
+/* ============================
+   FOOTER YEAR
+============================ */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
