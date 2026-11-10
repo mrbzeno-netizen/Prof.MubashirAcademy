@@ -1,0 +1,2182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+
+<title>Prof. Mubashir | Graphic Designer & Creative Educator</title>
+
+<meta name="description" content="Official portfolio of Prof. Mubashir. Professional Graphic Designer, CorelDRAW Expert, AI Creator, YouTuber and Computer Science Educator.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* ==================================
+   01. GLOBAL SETTINGS
+================================== */
+
+:root {
+    --primary: #ff0000;
+    --primary-dark: #c90000;
+    --background: #080808;
+    --secondary: #111111;
+    --card: #151515;
+    --white: #ffffff;
+    --gray: #a0a0a0;
+    --border: rgba(255,255,255,0.09);
+    --glass: rgba(10,10,10,0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 900;
+    margin-top: 8px;
+}
+
+.section-title p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ==================================
+   02. NAVIGATION
+================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-btn {
+    background: var(--primary);
+    padding: 10px 17px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: white;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ==================================
+   03. HERO SECTION
+================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 130px 0 80px;
+    background:
+    radial-gradient(circle at 80% 40%, rgba(255,0,0,.15), transparent 35%),
+    linear-gradient(120deg,#080808,#111);
+}
+
+.hero::before {
+    content: "PM";
+    position: absolute;
+    right: 5%;
+    top: 18%;
+    font-size: clamp(150px, 30vw, 400px);
+    font-weight: 900;
+    color: rgba(255,255,255,.025);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--primary);
+    border: 1px solid rgba(255,0,0,.4);
+    background: rgba(255,0,0,.08);
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px,7vw,83px);
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero h2 {
+    font-size: clamp(17px,3vw,25px);
+    margin-top: 18px;
+    color: #ddd;
+}
+
+.hero p {
+    color: var(--gray);
+    max-width: 620px;
+    margin: 20px 0 30px;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    border: 1px solid transparent;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: black;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border-color: #444;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.hero-social {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.hero-social a {
+    color: #aaa;
+    font-size: 19px;
+    transition: .3s;
+}
+
+.hero-social a:hover {
+    color: var(--primary);
+    transform: translateY(-4px);
+}
+
+/* ==================================
+   04. PROFILE BRANDING
+================================== */
+
+.profile-section {
+    background: var(--secondary);
+}
+
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.profile-card {
+    background:
+    radial-gradient(circle,rgba(255,0,0,.18),transparent 65%),
+    #171717;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    margin: auto;
+    border: 5px solid var(--primary);
+    overflow: hidden;
+    background: #222;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 40px rgba(255,0,0,.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-image .initials {
+    font-size: 65px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.profile-card h3 {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.profile-card p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.brand-logo {
+    font-size: 35px;
+    font-weight: 900;
+    margin-top: 20px;
+    letter-spacing: -2px;
+}
+
+.brand-logo span {
+    color: var(--primary);
+}
+
+.profile-description h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.profile-description p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.brand-tag {
+    display: inline-block;
+    background: rgba(255,0,0,.1);
+    color: var(--primary);
+    padding: 8px 13px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* ==================================
+   05. PORTFOLIO GALLERY
+================================== */
+
+.portfolio-section {
+    background: var(--background);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: var(--card);
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.portfolio-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.portfolio-item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    transition: .4s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.06);
+}
+
+.portfolio-info {
+    padding: 18px;
+}
+
+.portfolio-info h3 {
+    font-size: 16px;
+}
+
+.portfolio-info p {
+    color: var(--gray);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.portfolio-info span {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+.portfolio-item.hide {
+    display: none;
+}
+
+/* ==================================
+   06. SERVICES
+================================== */
+
+.services-section {
+    background: var(--secondary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px 25px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 35px rgba(255,0,0,.1);
+}
+
+.service-card i {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 17px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ==================================
+   07. SKILLS
+================================== */
+
+.skills-section {
+    background: var(--background);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px 40px;
+}
+
+.skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.skill-top h3 {
+    font-size: 14px;
+}
+
+.skill-top i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.skill-level {
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.skill-bar {
+    height: 7px;
+    background: #292929;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg,#a90000,#ff0000);
+    border-radius: 10px;
+    width: var(--level);
+    animation: grow 1.5s ease;
+}
+
+/* ==================================
+   08. ABOUT ME
+================================== */
+
+.about-section {
+    background: var(--secondary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-visual {
+    min-height: 350px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle,rgba(255,0,0,.2),transparent 60%),#171717;
+}
+
+.about-visual i {
+    font-size: 110px;
+    color: var(--primary);
+}
+
+.about-content h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.about-list i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+/* ==================================
+   09. YOUTUBE VIDEOS
+================================== */
+
+.youtube-section {
+    background: var(--background);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.video-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.video-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+}
+
+.video-thumb {
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.video-card:hover .video-thumb img {
+    transform: scale(1.07);
+}
+
+.video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--primary);
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.video-info {
+    padding: 18px;
+}
+
+.video-info h3 {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.video-info p {
+    color: var(--gray);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.video-info a {
+    display: inline-block;
+    color: var(--primary);
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.loading {
+    text-align: center;
+    padding: 35px;
+    color: var(--gray);
+    grid-column: 1/-1;
+}
+
+/* ==================================
+   10. CONTACT
+================================== */
+
+.contact-section {
+    background: var(--secondary);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 35px;
+}
+
+.contact-details {
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.contact-details h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.contact-item i {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.contact-item div span {
+    display: block;
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.contact-item div strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-form {
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #333;
+    background: #0a0a0a;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+}
+
+#form-status {
+    color: var(--primary);
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ==================================
+   11. FOOTER
+================================== */
+
+footer {
+    background: #050505;
+    border-top: 1px solid var(--border);
+    padding: 50px 0 25px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.footer-logo span {
+    color: var(--primary);
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 13px;
+    margin: 10px 0 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    height: 43px;
+    width: 43px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.copyright {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    color: #777;
+    font-size: 11px;
+}
+
+/* ==================================
+   12. WHATSAPP FLOAT BUTTON
+================================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 900;
+    height: 55px;
+    width: 55px;
+    display: grid;
+    place-items: center;
+    background: #25d366;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+}
+
+/* ==================================
+   13. ANIMATIONS
+================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    from { width: 0; }
+}
+
+/* ==================================
+   14. RESPONSIVE DESIGN
+================================== */
+
+@media(max-width:1000px) {
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .portfolio-grid,
+    .services-grid,
+    .video-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:750px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 13px 6%;
+        border-top: 1px solid #222;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .profile-wrapper,
+    .about-grid,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .portfolio-grid,
+    .services-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 175px;
+        height: 175px;
+    }
+
+    .profile-description h2,
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .contact-form,
+    .contact-details {
+        padding: 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ==================================
+     NAVIGATION
+================================== -->
+
+<header class="navbar">
+
+<div class="container nav-content">
+
+    <a href="#home" class="logo">
+        PROF.<span>MUBASHIR</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-btn">HIRE ME</a>
+
+</div>
+
+</header>
+
+
+<!-- ==================================
+     HERO
+================================== -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            CREATIVE DESIGNER | EDUCATOR | CONTENT CREATOR
+        </span>
+
+        <h1>
+            I'M PROF.<br>
+            <span>MUBASHIR</span>
+        </h1>
+
+        <h2>
+            Professional Graphic Designer &
+            <span class="highlight">Creative Educator</span>
+        </h2>
+
+        <p>
+            Transforming ideas into extraordinary visual experiences.
+            Professional Graphic Design, CorelDRAW, AI Creativity,
+            Web Technologies and Computer Science Education.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#portfolio" class="btn btn-primary">
+                <i class="fas fa-palette"></i>
+                Explore My Work
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-paper-plane"></i>
+                Let's Work Together
+            </a>
+
+        </div>
+
+        <div class="hero-social">
+
+            <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+               target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <!-- Add your Instagram profile URL -->
+            <a href="https://www.instagram.com/mubashir.creative?xtok=MXh6ajZmNzVzOTdvdQ==" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Add your Facebook profile URL -->
+            <a href="https://www.facebook.com?share/1CCyMEZiYu/" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="mailto:mr.bzeno@gmailcom" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     PROFILE AND BRANDING
+================================== -->
+
+<section class="section profile-section" id="profile">
+
+<div class="container profile-wrapper">
+
+    <div class="profile-card">
+
+        <div class="profile-image">
+
+            <span class="initials">PM</span>
+
+            <img src="https://kommodo.ai/i/KPBz5JkWBy9vesVrXzAT"
+                 alt="Prof. Mubashir"
+                 onerror="this.style.display='none'">
+
+        </div>
+
+        <h3>Prof. Mubashir</h3>
+
+        <p>Graphic Designer | Computer Science Educator</p>
+
+        <div class="brand-logo">
+            PROF.<span>MUBASHIR</span>
+        </div>
+
+        <span class="brand-tag">
+            CREATIVITY • TECHNOLOGY • EDUCATION
+        </span>
+
+    </div>
+
+    <div class="profile-description">
+
+        <span class="highlight">MY PERSONAL BRAND</span>
+
+        <h2>
+            Designing Ideas.<br>
+            <span class="highlight">Creating Impact.</span>
+        </h2>
+
+        <p>
+            Welcome to my professional creative space.
+            I am passionate about graphic design, modern technology,
+            computer science and digital education.
+        </p>
+
+        <p>
+            My goal is to create professional designs, teach
+            valuable digital skills and inspire the next generation
+            of creative minds.
+        </p>
+
+        <a href="#about" class="btn btn-primary">
+            More About Me
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     PORTFOLIO GALLERY
+================================== -->
+
+<section class="section portfolio-section" id="portfolio">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>MY CREATIVE WORK</span>
+
+        <h2>Professional <span class="highlight">Portfolio</span></h2>
+
+        <p>Explore my graphic design projects and creative work.</p>
+
+    </div>
+
+    <div class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+            All Projects
+        </button>
+
+        <button class="filter-btn" data-filter="logo">
+            Logos
+        </button>
+
+        <button class="filter-btn" data-filter="business">
+            Business Cards
+        </button>
+
+        <button class="filter-btn" data-filter="thumbnail">
+            Thumbnails
+        </button>
+
+        <button class="filter-btn" data-filter="social">
+            Social Media
+        </button>
+
+    </div>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item" data-category="business">
+
+            <img src="assets/portfolio/business-card.jpg"
+                 alt="Premium Business Card"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>Premium Business Card</h3>
+                <p>Modern Black & Gold Business Card Design</p>
+                <span>CORELDRAW DESIGN</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item" data-category="logo">
+
+            <img src="assets/portfolio/logo.jpg"
+                 alt="Professional Logo"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>Professional Logo Design</h3>
+                <p>Creative Brand Identity</p>
+                <span>LOGO DESIGN</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item" data-category="thumbnail">
+
+            <img src="assets/portfolio/thumbnail.jpg"
+                 alt="YouTube Thumbnail"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>YouTube Thumbnail</h3>
+                <p>Professional YouTube Graphics</p>
+                <span>THUMBNAIL DESIGN</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item" data-category="social">
+
+            <img src="assets/portfolio/social-media.jpg"
+                 alt="Social Media Advertisement"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>Social Media Advertisement</h3>
+                <p>Creative Digital Marketing Graphics</p>
+                <span>SOCIAL MEDIA</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item" data-category="business">
+
+            <img src="assets/portfolio/branding.jpg"
+                 alt="Corporate Branding"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>Corporate Branding</h3>
+                <p>Professional Brand Identity</p>
+                <span>BRANDING</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-item" data-category="thumbnail">
+
+            <img src="assets/portfolio/creative-design.jpg"
+                 alt="Creative Graphic Design"
+                 loading="lazy">
+
+            <div class="portfolio-info">
+                <h3>Creative Graphic Artwork</h3>
+                <p>Modern Digital Design</p>
+                <span>GRAPHIC DESIGN</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     SERVICES
+================================== -->
+
+<section class="section services-section" id="services">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>WHAT I OFFER</span>
+
+        <h2>My Professional <span class="highlight">Services</span></h2>
+
+        <p>Creative design solutions for individuals and businesses.</p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <i class="fas fa-pen-nib"></i>
+            <h3>Logo Design</h3>
+            <p>Unique and memorable professional brand logos.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-id-card"></i>
+            <h3>Business Card Design</h3>
+            <p>Premium business cards and corporate stationery.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fab fa-youtube"></i>
+            <h3>YouTube Thumbnails</h3>
+            <p>Creative, attractive and professional thumbnails.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Social Media Graphics</h3>
+            <p>Professional advertisements, posts and banners.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Brand Identity</h3>
+            <p>Complete visual branding and identity solutions.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-robot"></i>
+            <h3>AI Creative Content</h3>
+            <p>AI-powered visual concepts and digital creativity.</p>
+            <a href="#contact">Discuss Project →</a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     PROFESSIONAL SKILLS
+================================== -->
+
+<section class="section skills-section" id="skills">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>MY EXPERTISE</span>
+
+        <h2>Professional <span class="highlight">Skills</span></h2>
+
+        <p>Creative, technical and administrative capabilities.</p>
+
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fas fa-pen-nib"></i> CorelDRAW</h3>
+                <span class="skill-level">Professional</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:95%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fas fa-image"></i> Adobe Photoshop</h3>
+                <span class="skill-level">Graphic Design</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fab fa-html5"></i> HTML</h3>
+                <span class="skill-level">Web Development</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fab fa-css3-alt"></i> CSS</h3>
+                <span class="skill-level">Web Design</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fab fa-python"></i> Python</h3>
+                <span class="skill-level">Programming</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:75%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fas fa-robot"></i> AI Tools</h3>
+                <span class="skill-level">Creative AI</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fas fa-briefcase"></i> Office Management</h3>
+                <span class="skill-level">Administration</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <h3><i class="fas fa-file-excel"></i> MS Office</h3>
+                <span class="skill-level">Productivity</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level:85%"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     ABOUT ME
+================================== -->
+
+<section class="section about-section" id="about">
+
+<div class="container">
+
+    <div class="section-title">
+        <span>MY STORY</span>
+        <h2>About <span class="highlight">Me</span></h2>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-visual">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <div class="about-content">
+
+            <h2>
+                Creativity Meets
+                <span class="highlight">Technology</span>
+            </h2>
+
+            <p>
+                I am Prof. Mubashir, a creative professional
+                passionate about graphic designing, technology,
+                programming and education.
+            </p>
+
+            <p>
+                I create professional graphic designs using
+                CorelDRAW and modern creative tools. I also explore
+                web development, Python programming and artificial
+                intelligence.
+            </p>
+
+            <p>
+                Through my YouTube channel, I share tutorials,
+                creative knowledge and practical learning experiences
+                to help people develop their digital skills.
+            </p>
+
+            <ul class="about-list">
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    Professional Graphic Designing
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    Computer Science Education
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    Web Technologies & Programming
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    Office Management & Productivity
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     YOUTUBE LATEST VIDEOS
+================================== -->
+
+<section class="section youtube-section" id="youtube">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>MY YOUTUBE CHANNEL</span>
+
+        <h2>Latest <span class="highlight">Videos</span></h2>
+
+        <p>Watch my latest tutorials and creative content.</p>
+
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+
+        <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            Loading latest videos...
+        </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:35px">
+
+        <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+           target="_blank"
+           class="btn btn-primary">
+
+            <i class="fab fa-youtube"></i>
+            Visit My YouTube Channel
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     CONTACT
+================================== -->
+
+<section class="section contact-section" id="contact">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>LET'S WORK TOGETHER</span>
+
+        <h2>Get In <span class="highlight">Touch</span></h2>
+
+        <p>Have a project or collaboration idea? Contact me.</p>
+
+    </div>
+
+    <div class="contact-wrapper">
+
+        <div class="contact-details">
+
+            <h3>Let's Connect</h3>
+
+            <p>
+                I am available for creative projects,
+                graphic design work and professional collaborations.
+            </p>
+
+            <div class="contact-item">
+                <i class="fas fa-user"></i>
+                <div>
+                    <span>Name</span>
+                    <strong>Prof. Mubashir</strong>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-palette"></i>
+                <div>
+                    <span>Profession</span>
+                    <strong>Graphic Designer</strong>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fab fa-youtube"></i>
+                <div>
+                    <span>YouTube</span>
+                    <strong>@Prof.Mubashir</strong>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <div>
+                    <span>Services</span>
+                    <strong>Design & Digital Creativity</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <form class="contact-form" id="contactForm">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Project / Subject</label>
+                <input type="text" id="subject"
+                       placeholder="What do you need?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message"
+                          placeholder="Tell me about your project..."
+                          required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+            </button>
+
+            <p id="form-status" role="status"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     FOOTER
+================================== -->
+
+<footer>
+
+<div class="container">
+
+    <div class="footer-logo">
+        PROF.<span>MUBASHIR</span>
+    </div>
+
+    <p>
+        Creative Designer | Educator | YouTube Creator
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://www.youtube.com/channel/UC5zikZ5RP2lrAUA41o8Tpxg"
+           target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Replace # with your real profile links -->
+
+        <a href="https://www.instagram.com/mubashir.creative?xtok=MXh6ajZmNzVzOTdvdQ==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com?share/1CCyMEZiYu/" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="mailto:mrbzeno@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </div>
+
+    <div class="copyright">
+        © <span id="year"></span> Prof. Mubashir.
+        All Rights Reserved.
+        <br>
+        Designed with <span class="highlight">♥</span>
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a href="https://wa.me/923137887422"
+   target="_blank"
+   class="whatsapp-float"
+   aria-label="Chat on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<!-- ==================================
+     JAVASCRIPT
+================================== -->
+
+<script>
+
+/* ==================================
+   01. YOUR WEBSITE SETTINGS
+================================== */
+
+const CHANNEL_ID = "UC5zikZ5RP2lrAUA41o8Tpxg";
+
+const CHANNEL_URL =
+    `https://www.youtube.com/channel/${CHANNEL_ID}`;
+
+/*
+  CHANGE THESE TWO VALUES:
+
+  CONTACT_EMAIL = Your_Email@gmail.com
+  WHATSAPP_NUMBER = Your WhatsApp number with country code
+  Example Pakistan: 923007865431
+*/
+
+const CONTACT_EMAIL = "mrbzeno@gmail.com";
+
+const WHATSAPP_NUMBER = "923137887422";
+
+
+/* Update WhatsApp button */
+
+document.querySelector(".whatsapp-float").href =
+    `https://wa.me/${WHATSAPP_NUMBER}`;
+
+
+/* ==================================
+   02. MOBILE MENU
+================================== */
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+    const open = navLinks.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", open);
+
+    menuToggle.innerHTML = open
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+    });
+
+});
+
+
+/* ==================================
+   03. PORTFOLIO FILTER
+================================== */
+
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+const portfolioItems =
+    document.querySelectorAll(".portfolio-item");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const category = button.dataset.filter;
+
+        portfolioItems.forEach(item => {
+
+            const itemCategory = item.dataset.category;
+
+            if (category === "all" || category === itemCategory) {
+
+                item.classList.remove("hide");
+
+            } else {
+
+                item.classList.add("hide");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ==================================
+   04. YOUTUBE RSS VIDEO FEED
+================================== */
+
+const RSS_URL =
+    `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+
+const API_URL =
+    `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+
+const videoGrid =
+    document.getElementById("videoGrid");
+
+
+function extractVideoId(guid) {
+
+    if (!guid) return null;
+
+    const match = guid.match(
+        /yt:video:([a-zA-Z0-9_-]{11})/
+    );
+
+    if (match) return match[1];
+
+    const fallback = guid.match(
+        /(?:v=|youtu\.be\/|shorts\/)([a-zA-Z0-9_-]{11})/
+    );
+
+    return fallback ? fallback[1] : null;
+
+}
+
+
+function escapeHTML(value) {
+
+    return String(value || "").replace(/[&<>"']/g, char => ({
+
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+
+    })[char]);
+
+}
+
+
+function renderVideos(videos) {
+
+    const latest = videos.slice(0, 3);
+
+    const cards = latest.map(video => {
+
+        const id = extractVideoId(video.guid);
+
+        if (!id) return "";
+
+        const title = escapeHTML(video.title);
+
+        const date = video.pubDate
+            ? new Date(video.pubDate).toLocaleDateString()
+            : "Latest Video";
+
+        const link =
+            `https://www.youtube.com/watch?v=${id}`;
+
+        const thumbnail =
+            `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
+        return `
+
+        <article class="video-card">
+
+            <a href="${link}" target="_blank"
+               rel="noopener noreferrer" class="video-thumb">
+
+                <img src="${thumbnail}"
+                     alt="${title}"
+                     loading="lazy">
+
+                <span class="video-play">
+                    <i class="fas fa-play"></i>
+                </span>
+
+            </a>
+
+            <div class="video-info">
+
+                <h3>${title}</h3>
+
+                <p>
+                    <i class="far fa-calendar"></i>
+                    ${date}
+                </p>
+
+                <a href="${link}" target="_blank"
+                   rel="noopener noreferrer">
+                    WATCH VIDEO →
+                </a>
+
+            </div>
+
+        </article>
+
+        `;
+
+    }).join("");
+
+    videoGrid.innerHTML = cards || `
+        <div class="loading">
+            No videos available. Visit my YouTube channel.
+        </div>
+    `;
+
+}
+
+
+async function loadVideos() {
+
+    try {
+
+        const response = await fetch(API_URL);
+
+        if (!response.ok) {
+            throw new Error("Unable to fetch RSS feed");
+        }
+
+        const data = await response.json();
+
+        if (data.status !== "ok" || !Array.isArray(data.items)) {
+            throw new Error("Invalid RSS data");
+        }
+
+        renderVideos(data.items);
+
+    } catch (error) {
+
+        console.error(error);
+
+        videoGrid.innerHTML = `
+
+            <div class="loading">
+
+                <i class="fas fa-exclamation-circle"></i>
+
+                Videos could not be loaded right now.
+
+                <br><br>
+
+                <a href="${CHANNEL_URL}"
+                   target="_blank"
+                   class="highlight">
+                    Visit YouTube Channel
+                </a>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+loadVideos();
+
+
+/* ==================================
+   05. CONTACT FORM
+================================== */
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const subject =
+        document.getElementById("subject").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+    const status =
+        document.getElementById("form-status");
+
+    if (!name || !email || !subject || !message) {
+
+        status.textContent = "Please fill in all fields.";
+
+        return;
+
+    }
+
+    if (CONTACT_EMAIL === "YOUR_EMAIL@example.com") {
+
+        status.textContent =
+            "Please configure your contact email in the JavaScript.";
+
+        return;
+
+    }
+
+    const body = encodeURIComponent(
+
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+
+    );
+
+    const mailto =
+
+        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+    status.textContent =
+        "Opening your email application...";
+
+    window.location.href = mailto;
+
+});
+
+
+/* ==================================
+   06. FOOTER YEAR
+================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
